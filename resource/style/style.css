@@ -1,0 +1,94 @@
+.Tmenu{
+    font-family:sans-serif;
+    
+    color: antiquewhite;
+    font-size: 20px;
+    padding: 5px;
+    
+
+}
+.fondo{
+    background-color:rgb(145, 112, 151);
+
+}
+
+
+
+nav{
+	position: fixed;
+	width: 200px;
+	height: 100%;
+	background-color:rgb(221, 145, 221);
+
+
+
+
+}
+.contenedor1{
+    width: 1200px;
+    height: 1000px;
+    background-color:black;
+    margin: 0.5em auto;
+    padding: 0.5em;
+}
+section{
+    width: 1000px; 
+    height:1000px;
+    float:center;
+    background-color: black;
+    margin: 0.1em auto;
+    padding: 0.1em;
+    
+
+}
+h1{
+    font-family:sans-serif;
+    text-decoration:none;
+    color: antiquewhite;
+    font-size: 20px;
+    padding: 5px;
+    float:center;
+}
+p{
+    font-family:sans-serif;
+    text-decoration:none;
+    color: antiquewhite;
+    font-size: 15px;
+    padding: 5px;
+    float:center;
+
+}
+ul{
+    list-style: none;
+    text-decoration:none;
+    font-family:sans-serif;
+    color: antiquewhite;
+    font-size: 20px;
+    padding: 25px;
+
+}
+.color1{
+    background-color: rgb(7, 201, 207);
+    width: 800px;
+    padding: 50px;
+    float:right;  
+}
+
+.color2{
+    background-color: rgb(238, 241, 14);
+    width: 800px;
+    padding: 50px;
+    float:right; 
+}
+.color3{
+    background-color: rgb(245, 113, 4);
+    width: 800px;
+    padding: 50px;
+    float:right; 
+}
+.color4{
+    background-color: rgb(245, 4, 4);
+    width: 800px;
+    padding: 50px;
+    float:right; 
+}
