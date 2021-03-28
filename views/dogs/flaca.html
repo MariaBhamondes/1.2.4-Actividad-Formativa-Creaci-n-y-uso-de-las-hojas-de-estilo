@@ -6,38 +6,52 @@
 
         <!--Importar hoja de estilos-->
         <link rel="stylesheet" href="../../resource/style/estilos.css">
+        <link rel="stylesheet" href="../../resource/style/style.css">
 
     </head>
-    <body class="fondo-body">
-        <!--Cabecera titulo principal de la vista-->
-        <header>
-            <h1> FLACA </h1>
-        </header>
-
-        <!--Cuerpo del documento-->
-        <section class="fondo-container">
-            
-            <!--Botones para volver a las otras vistas-->
-            <div class="nav">
-                <!--Volver a perros-->
-                <a href="perros.html" class="enlace">Volver a Perros</a>
-                <!--Volver al inicio-->
-                <a href="../main.html" class="enlace">Inicio</a>
-            </div>
-            
-            <!--Descripción del perro-->
-            <div class="descripcion">
-                <img src="../../resource/img/flaca.jpg" alt="Perro flaca" title="Fotografía perro Flaca" class="mascota">
-                
-                <ul class="font detalles">
-                    <li>Nombre: Flaca</li>
-                    <li>Edad: 2 años</li>
-                    <li>Género: Hembra</li>
-                    <li>Esterilizado: Sí</li>
-                    <li>N° chip: 2222222222</li>
+    <body class="contenedor">
+        <!--Barra navegadora-->
+        <section>
+            <nav>
+                <ul>
+                    <li><a href="../ACT2.html">Inicio </a></li>
+                    <li><a href="../main.html">Nosotros </a></li>
+                    <li><a href="perros.html">Perros</a></li>
+                    <li><a href="../cats/gatos.html">Gatos </a></li>
+                    <li><a href="../contacto.html">Contactos</a></li>
                 </ul>
-            </div>            
+            </nav>
         </section>
+
+        <!--Cuerpo página-->
+        <section class="fondo-body">
+            <!--Cabecera titulo principal de la vista-->
+            <div class="header">
+                <h1 class="h1"> FLACA </h1>
+            </div>
+
+            <!--Cuerpo del documento-->
+            <section class="fondo-container">
+                <!--Botones para volver a las otras vistas-->
+                <a href="perros.html" class="enlace">Volver a Perros</a>
+                <a href="../main.html" class="enlace">Inicio</a>
+            
+                <!--Descripción del gato-->
+                <!--Descripción del perro-->
+                <div class="descripcion">
+                    <img src="../../resource/img/flaca.jpg" alt="Perro flaca" title="Fotografía perro Flaca" class="mascota">
+                    
+                    <ul class="font detalles">
+                        <li>Nombre: Flaca</li>
+                        <li>Edad: 2 años</li>
+                        <li>Género: Hembra</li>
+                        <li>Esterilizado: Sí</li>
+                        <li>N° chip: 2222222222</li>
+                    </ul>
+                </div>  
+            </section>
+        </section>
+
     </body>
     <!--Pie de página con los integrantes del equipo-->
     <footer>
@@ -48,4 +62,4 @@
             </ul>
         </p>
     </footer>
-</html>
+</html>   
