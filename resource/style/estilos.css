@@ -182,19 +182,23 @@ label{
 }
 
 .enviar{
-    margin-top: 5%;
     background-color: rgb(68, 63, 68);
     margin-left: 11%;
     color: aliceblue;
+    font-family: sans-serif;
+    font-size: 18px;
+    margin-top: 5%;
     width: 20%;
-    padding: 10px;
+    padding: 8px;
 }
 
 .cancelar{
-    margin-top: 5%;
     background-color: rgb(196, 12, 12);
     color: aliceblue;
+    font-family: sans-serif;
+    font-size: 18px;
     margin-left: 5%;
+    margin-top: 5%;
     width: 20%;
-    padding: 10px;
+    padding: 8px;
 }
