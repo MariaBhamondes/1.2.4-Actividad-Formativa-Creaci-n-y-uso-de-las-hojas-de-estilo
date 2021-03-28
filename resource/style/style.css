@@ -1,94 +1,92 @@
 .Tmenu{
     font-family:sans-serif;
-    
     color: antiquewhite;
     font-size: 20px;
-    padding: 5px;
-    
-
+    padding: 5px;  
 }
-.fondo{
-    background-color:rgb(145, 112, 151);
-
-}
-
-
 
 nav{
-	position: fixed;
-	width: 200px;
+    float: left;
+    display: block;
+    position: fixed;
+	width: 20%;
 	height: 100%;
-	background-color:rgb(221, 145, 221);
-
-
-
-
+	background-color: rgb(156, 81, 158);
 }
-.contenedor1{
-    width: 1200px;
-    height: 1000px;
-    background-color:black;
-    margin: 0.5em auto;
-    padding: 0.5em;
-}
-section{
-    width: 1000px; 
-    height:1000px;
-    float:center;
-    background-color: black;
-    margin: 0.1em auto;
-    padding: 0.1em;
-    
 
+.contenedor{
+    background-color: rgb(156, 81, 158);
+    margin: 0%;
+    margin-right: 2%;
 }
+
 h1{
     font-family:sans-serif;
-    text-decoration:none;
     color: antiquewhite;
     font-size: 20px;
-    padding: 5px;
-    float:center;
+    padding-top: 2%;
+    padding-left: 7%;
 }
+
 p{
     font-family:sans-serif;
-    text-decoration:none;
     color: antiquewhite;
     font-size: 15px;
-    padding: 5px;
-    float:center;
-
+    padding-left: 7%;
+    padding-right: 7%;
+    padding-bottom: 2%;
 }
+
 ul{
     list-style: none;
+    padding: 25px;
+}
+
+ul li{ /*Separar las lines de texto*/
+    line-height: 40px;
+}
+
+a{
     text-decoration:none;
     font-family:sans-serif;
     color: antiquewhite;
     font-size: 20px;
-    padding: 25px;
-
+    font-weight: bold;
 }
+
+a:hover{ /*Cambia color del texto, al pasar el cursor sobre él*/
+    color: rgb(56, 4, 58);
+}
+
 .color1{
-    background-color: rgb(7, 201, 207);
-    width: 800px;
-    padding: 50px;
-    float:right;  
+    background-color: rgb(10, 160, 165);
+    width: 80%;
+    height: 25%;
+    float:right; 
+    display: block;
 }
 
 .color2{
-    background-color: rgb(238, 241, 14);
-    width: 800px;
-    padding: 50px;
+    background-color: rgb(186, 189, 33);
+    width: 80%;
+    height: 25%;
     float:right; 
+    display: block;
 }
+
 .color3{
     background-color: rgb(245, 113, 4);
-    width: 800px;
-    padding: 50px;
+    width: 80%;
+    height: 25%;
     float:right; 
+    display: block;
 }
+
 .color4{
     background-color: rgb(245, 4, 4);
-    width: 800px;
-    padding: 50px;
+    width: 80%;
+    height: 20%;
     float:right; 
+    display: block;
 }
+
