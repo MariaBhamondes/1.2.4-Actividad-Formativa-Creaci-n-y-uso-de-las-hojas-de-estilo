@@ -1,41 +1,55 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title>Tommy</title>
+    <head>
+        <meta charset="UTF-8">
+        <title>Tommy</title>
 
-    <link rel="stylesheet" href="../../resource/style/estilos.css">
+        <!--Importar hoja de estilos-->
+        <link rel="stylesheet" href="../../resource/style/estilos.css">
+        <link rel="stylesheet" href="../../resource/style/style.css">
 
-</head>
-<body class="fondo-body">
-    <!--Cabecera titulo principal de la vista-->
-    <header>
-        <h1> TOMMY </h1>
-    </header>
+    </head>
+    <body class="contenedor">
+        <!--Barra navegadora-->
+        <section>
+            <nav>
+                <ul>
+                    <li><a href="../ACT2.html">Inicio </a></li>
+                    <li><a href="../main.html">Nosotros </a></li>
+                    <li><a href="../dogs/perros.html">Perros</a></li>
+                    <li><a href="gatos.html">Gatos </a></li>
+                    <li><a href="../contacto.html">Contactos</a></li>
+                </ul>
+            </nav>
+        </section>
 
-    <!--Cuerpo del documento-->
-    <section class="fondo-container">
-        
-        <!--Botones para volver a las otras vistas-->
-        <div class="nav">
-            <!--Volver a perros-->
-            <a href="gatos.html" class="enlace">Volver a Gatos</a>
-            <!--Volver al inicio-->
-            <a href="../main.html" class="enlace">Inicio</a>
-        </div>
-        
-        <!--Descripción del gato-->
-        <div class="descripcion">
-            <img src="../../resource/img/tommy.jpg" alt="Adopción de gato Tommy" title="Adopción de Tommy" class="mascota">
-            <ul class="font detalles">
-                <li>Nombre: Tommy</li>
-                <li>Edad : 3 meses</li>
-                <li>Género : Macho</li>
-                <li>Esterilizado: No</li>
-                <li>N° chip : 4546465</li>
-            </ul>
-        </div>            
-    </section>
+        <!--Cuerpo página-->
+        <section class="fondo-body">
+            <!--Cabecera titulo principal de la vista-->
+            <div class="header">
+                <h1 class="h1"> TOMMY </h1>
+            </div>
+
+            <!--Cuerpo del documento-->
+            <section class="fondo-container">
+                <!--Botones para volver a las otras vistas-->
+                <a href="gatos.html" class="enlace">Volver a Gatos</a>
+                <a href="../main.html" class="enlace">Inicio</a>
+            
+                <!--Descripción del gato-->
+                <div class="descripcion">
+                    <img src="../../resource/img/tommy.jpg" alt="Adopción de gato Tommy" title="Adopción de Tommy" class="mascota">
+                    <ul class="font detalles">
+                        <li>Nombre: Tommy</li>
+                        <li>Edad : 3 meses</li>
+                        <li>Género : Macho</li>
+                        <li>Esterilizado: No</li>
+                        <li>N° chip : 4546465</li>
+                    </ul>
+                </div> 
+            </section>
+        </section>
+
     </body>
     <!--Pie de página con los integrantes del equipo-->
     <footer>
@@ -46,4 +60,4 @@
             </ul>
         </p>
     </footer>
-</html>
+</html>     
