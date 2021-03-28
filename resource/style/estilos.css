@@ -165,7 +165,7 @@ label{
     width: 400px;
     height: 30px;
     margin-bottom: 2%;
-    border-radius: 2%;
+    border-radius: 10px;
     border: 1px;
     border-color: rgb(156, 81, 158);
     border-style: solid;
@@ -175,30 +175,59 @@ label{
     height: 70px;
 }
 
+.centrar{
+    display: flex;
+    justify-content: center;
+}
+
 .form{
     padding-top: 10%;
-    padding-left: 15%;
     padding-bottom: 5%;
 }
 
 .enviar{
-    background-color: rgb(68, 63, 68);
+    background-color: rgb(156, 81, 158);
     margin-left: 11%;
     color: aliceblue;
     font-family: sans-serif;
     font-size: 18px;
     margin-top: 5%;
-    width: 20%;
+    width: 150px;
     padding: 8px;
+    border-radius: 20px;
+    border-style: none;
 }
 
 .cancelar{
-    background-color: rgb(196, 12, 12);
+    background-color: rgb(110, 108, 108);
     color: aliceblue;
     font-family: sans-serif;
     font-size: 18px;
     margin-left: 5%;
     margin-top: 5%;
-    width: 20%;
+    width: 150px;
     padding: 8px;
+    border-radius: 20px;
+    border-style: none;
+}
+
+.enviar:hover{
+    background-color: rgb(112, 60, 114);
+    cursor: pointer;
+}
+
+.cancelar:hover{
+    background-color: rgb(82, 79, 79);
+    cursor: pointer;
+}
+
+.input:focus{
+    border: 3px;
+    border-color: rgb(156, 81, 158);
+    border-style: solid;
+    outline: none;
+}
+
+button:focus{
+    outline: none;
 }
