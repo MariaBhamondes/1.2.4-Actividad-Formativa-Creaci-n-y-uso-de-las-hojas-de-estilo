@@ -1,0 +1,91 @@
+.Tmenu{
+    font-family:sans-serif;
+    color: antiquewhite;
+    font-size: 20px;
+    padding: 5px;  
+}
+
+nav{
+    float: left;
+    display: block;
+    position: fixed;
+	width: 20%;
+	height: 100%;
+	background-color: rgb(156, 81, 158);
+}
+
+.contenedor{
+    background-color: rgb(156, 81, 158);
+    margin: 0%;
+    margin-right: 2%;
+}
+
+h1{
+    font-family:sans-serif;
+    color: antiquewhite;
+    font-size: 20px;
+    padding-top: 2%;
+    padding-left: 7%;
+}
+
+p{
+    font-family:sans-serif;
+    color: antiquewhite;
+    font-size: 15px;
+    padding-left: 7%;
+    padding-right: 7%;
+    padding-bottom: 2%;
+}
+
+ul{
+    list-style: none;
+    padding: 25px;
+}
+
+ul li{ /*Separar las lines de texto*/
+    line-height: 40px;
+}
+
+a{
+    text-decoration:none;
+    font-family:sans-serif;
+    color: antiquewhite;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+a:hover{ /*Cambia color del texto, al pasar el cursor sobre él*/
+    color: rgb(56, 4, 58);
+}
+
+.color1{
+    background-color: rgb(10, 160, 165);
+    width: 80%;
+    height: 25%;
+    float:right; 
+    display: block;
+}
+
+.color2{
+    background-color: rgb(186, 189, 33);
+    width: 80%;
+    height: 25%;
+    float:right; 
+    display: block;
+}
+
+.color3{
+    background-color: rgb(245, 113, 4);
+    width: 80%;
+    height: 25%;
+    float:right; 
+    display: block;
+}
+
+.color4{
+    background-color: rgb(245, 4, 4);
+    width: 80%;
+    height: 20%;
+    float:right; 
+    display: block;
+}
