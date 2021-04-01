@@ -85,6 +85,7 @@ ul{
     text-align: center;
     padding-top: 1%;
     padding-bottom: 1%;
+    padding-top: 5%;
 }
 
 .h2{
@@ -108,10 +109,11 @@ ul{
 }
 
 .fotos-url{
-    width: 100px;
-    height: 100px;
+    width: 110px;
+    height: 110px;
     border-radius: 100%;
-    margin-top: 10%;
+    margin-top: 1%;
+    margin-left: 5%;
 }
 
 a:link, a:visited, a:active{
@@ -163,3 +165,52 @@ input[type="email"]:focus,
 button:focus{
     outline: none;
 }
+
+
+.img-intro{
+    width: 40%;
+    height: 20%;
+    border-radius: 20px;
+    float: left;
+    margin: 2%;
+}
+
+.enlace{
+    margin-top: 1%;
+    color: purple;
+    font-size: 16px;
+}
+
+.enlace:hover{
+    color: rgb(75, 68, 68);
+}
+
+
+.mascota{
+    width: 100%;
+    height: 100%;
+    margin-right: 2%;
+    border-radius: 10px;
+    float: left;
+    margin-top: 0%;
+}  
+
+
+.detalles{ 
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-top: 15%;
+    margin-bottom: 15%;
+    font-size: 18px;
+    line-height: 150%;
+} 
+
+hr{ 
+   background-color: purple;
+   height: 10px;
+}
+
+.titulo{
+    font-size: xx-large;
+}
+
