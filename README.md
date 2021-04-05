@@ -7,4 +7,5 @@ Herramientas utilizadas:
 - CSS (bootstrap 5)
 
 Descripción:
+
 Página web enfocada en exponer mascotas sin dueño, para que estas puedan encontrar un hogar donde los cuiden y entreguen cariño.

@@ -1,35 +1,59 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
     <head>
         <meta charset="UTF-8">
         <title>Nosotros</title>
 
-        <!--Importar hoja de estilos-->
-        <link rel="stylesheet" href="../resource/style/estilos.css">
-        <link rel="stylesheet" href="../resource/style/style.css">
+        <!--Importar bootstrap-->
+        <link rel="stylesheet" href="../resource/bootstrap-5.0.0/css/bootstrap.min.css">
+        <script src="../resource/bootstrap-5.0.0/js/bootstrap.min.js"></script>
+
+        <!--Hoja de estilos propia-->
+        <link rel="stylesheet" href="../resource/style/styles.css">
 
     </head>
-    <body class="contenedor">
+    <body class="bg-fondo">
         <!--Barra navegadora-->
-        <section>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Inicio </a></li>
-                    <li><a href="nosotros.html">Nosotros </a></li>
-                    <li><a href="dogs/perros.html">Perros</a></li>
-                    <li><a href="cats/gatos.html">Gatos </a></li>
-                    <li><a href="contacto.html">Contactos</a></li>
-                </ul>
-            </nav>
-        </section>
-
-        <!--Cuerpo página-->
-        <section class="fondo-body">
-            <!--Cabecera titulo principal de la vista-->
-            <div class="header">
-                <h1 class="h1"> ONG - AYUDA A UN PELUDO</h1>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-nav">
+            <div class="container-fluid">
+                <a class="navbar-brand titulo" href="index.html">AYUDA A UN PELUDO</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="nosotros.html">Nosotros</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Mascotas
+                            </a>
+                            <ul class="dropdown-menu navbar-dark bg-nav2" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="../views/cats/gatos.html">Gatos</a></li>
+                                <li><a class="dropdown-item" href="../views/dogs/perros.html">Perros</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-secondary" type="submit">Buscar</button>
+                    </form>
+                </div>
             </div>
-
+        </nav>
+        <!--Cuerpo de la página-->
+        <section class="container fondo-container">
+            
+            <!--Cabecera titulo principal de la vista-->
+            <h1 class="h1"> ONG - AYUDA A UN PELUDO</h1>
+            
             <!--Cuerpo del documento-->
             <div class="fondo-container">
                 <!--Descripción de la sección-->
@@ -56,20 +80,20 @@
                 <!--Listado de secciones de ayuda-->
                 <div>
                     <h2 class="h2">Nuestras secciones de ayuda</h2>
-                    <ul>
-                        <li>
+                    <div class="row">
+                        <div class="col-1 col-lg-3"> </div>
+                        <div class="col-11 col-lg-6">
                             <a href="cats/gatos.html" class="font">
                                 <img src="../resource/img/gato.jpg" alt="Adopción de Gatos" title="Adopción de Gatos" class="fotos-url">
                                 Gatos
                             </a>
-                        </li>
-                        <li>
                             <a href="dogs/perros.html" class="font">
                                 <img src="../resource/img/perro.jpg" alt="Adopción de Perros" title="Adopción de Perros" class="fotos-url">
                                 Perros
                             </a>
-                        </li>
-                    </ul>           
+                        </div>
+                    </div>
+                                
                 </div>
             </div>
         </section>
@@ -83,5 +107,4 @@
             </p>
         </footer>
     </body>
-    
 </html>
