@@ -145,11 +145,13 @@ a:link, a:visited, a:active{
 .enviar:hover{
     background-color: rgb(112, 60, 114);
     cursor: pointer;
+    color: white;
 }
 
 .cancelar:hover{
     background-color: rgb(82, 79, 79);
     cursor: pointer;
+    color: white;
 }
 
 input[type="text"]:focus,
