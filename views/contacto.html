@@ -60,7 +60,7 @@
                         <div class="col-0 col-lg-1"></div>
                         <div class="col-12 col-lg-10">
                             <label for="nombre" class="form-label">Nombre:</label>
-                            <input type="text" class="form-control" name="nombre" autofocus placeholder="Ingrese su Nombre Completo"/><br>
+                            <input type="text" class="form-control" name="nombre" autofocus placeholder="Ingrese su Nombre Completo" required/><br>
                         </div>
                     </div>
                 </div>
@@ -70,7 +70,7 @@
                         <div class="col-0 col-lg-1"></div>
                         <div class="col-12 col-lg-10">
                             <label for="apellidos" class="form-label">Apellidos:</label>
-                            <input type="text" class="form-control" name="apellidos" placeholder="Ingrese sus Apellidos"><br>
+                            <input type="text" class="form-control" name="apellidos" placeholder="Ingrese sus Apellidos" required><br>
                         </div>
                     </div>
                 </div>
@@ -80,7 +80,7 @@
                         <div class="col-0 col-lg-1"></div>
                         <div class="col-12 col-lg-10">
                             <label for="email" class="form-label">Correo electrónico:</label>
-                            <input type="email" class="form-control" name="email" placeholder="Ingrese su correo electrónico"><br>
+                            <input type="email" class="form-control" name="email" placeholder="Ingrese su correo electrónico" required><br>
                         </div>
                     </div>
                 </div>
@@ -90,7 +90,7 @@
                         <div class="col-0 col-lg-1"></div>
                         <div class="col-12 col-lg-10">
                             <label for="comentario" class="form-label">Comentario:</label>
-                            <textarea name="comentario"  class="form-control textarea" cols="30" rows="10" placeholder="Ingrese un comentario"></textarea><br>
+                            <textarea name="comentario"  class="form-control textarea" cols="30" rows="10" placeholder="Ingrese un comentario" required></textarea><br>
                         </div>
                     </div>
                 </div>
@@ -98,13 +98,54 @@
                 <div class="row">
                     <div class="col-1 col-lg-3"></div>
                     <div class="col-5 col-lg-3">
-                        <button type="button" class="btn enviar">ENVIAR</button> 
+                        <!-- Boton alerta Mensaje enviado -->
+                        <button type="submit" class="btn enviar" data-bs-toggle="modal" data-bs-target="#alertEnviar">ENVIAR</button> 
                     </div>
                     <div class="col-5 col-lg-3">
-                        <button type="button" class="btn cancelar">CANCELAR</button>
+                        <!-- Boton alerta Redireccionamiento de vista -->
+                        <button type="button" class="btn cancelar" data-bs-toggle="modal" data-bs-target="#alertCancelar">CANCELAR</button>
                     </div>
                 </div>
             </form>
+            
+            <!-- Modal/Alerta CANCELAR-->
+            <div class="modal fade" id="alertEnviar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">MENSAJE</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            ¿Desea enviar mensaje a ADOPTA UN PELUDO? <br>
+                            Si presiona aceptar, usted será redirigido al inicio.
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                            <a href="index.html" class="btn btn-danger" >Aceptar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal/Alerta CANCELAR-->
+            <div class="modal fade" id="alertCancelar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">MENSAJE</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            Usted será redirigido al inicio de la página.
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                            <a href="index.html" class="btn btn-danger" >Aceptar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
         <!--Pie de página con los integrantes del equipo-->
         <footer>
