@@ -131,6 +131,17 @@ a:link, a:visited, a:active{
     border-style: none;
 }
 
+.enviar2{
+    background-color: rgb(156, 81, 158);
+    color: aliceblue;
+    font-family: sans-serif;
+    font-size: 18px;
+    width: 20%;
+    padding: 2%;
+    border-radius: 20px;
+    border-style: none;
+}
+
 .cancelar{
     background-color: rgb(110, 108, 108);
     color: aliceblue;
@@ -142,13 +153,26 @@ a:link, a:visited, a:active{
     border-style: none;
 }
 
-.enviar:hover{
+.cancelar2{
+    background-color: rgb(110, 108, 108);
+    color: aliceblue;
+    font-family: sans-serif;
+    font-size: 18px;
+    width: 20%;
+    padding: 2%;
+    border-radius: 20px;
+    border-style: none;
+}
+
+.enviar:hover, 
+.enviar2:hover{
     background-color: rgb(112, 60, 114);
     cursor: pointer;
     color: white;
 }
 
-.cancelar:hover{
+.cancelar:hover,
+.cancelar2{
     background-color: rgb(82, 79, 79);
     cursor: pointer;
     color: white;
