@@ -7,7 +7,7 @@
         <!--Importar bootstrap-->
         <link rel="stylesheet" href="../resource/bootstrap-5.0.0/css/bootstrap.min.css">
         <script src="../resource/bootstrap-5.0.0/js/bootstrap.min.js"></script>
-
+        <script src="js/validacionCampos.js"></script>
         <!--Hoja de estilos propia-->
         <link rel="stylesheet" href="../resource/style/styles.css">
 
@@ -52,104 +52,98 @@
         <section class="container fondo-container">
             <!--Cabecera titulo principal de la vista-->
             <h1 class="h1"> CONTÁCTANOS </h1>
-            <!--Formulario-->
-            <form>
-                <!--Nombre de la persona-->
-                <div class="form-group">
-                    <div class="row">
-                        <div class="col-0 col-lg-1"></div>
-                        <div class="col-12 col-lg-10">
-                            <label for="nombre" class="form-label">Nombre:</label>
-                            <input type="text" class="form-control" name="nombre" autofocus placeholder="Ingrese su Nombre Completo" required/><br>
-                        </div>
-                    </div>
-                </div>
-                <!--Apellidos de la persona-->
-                <div class="form-group">
-                    <div class="row">
-                        <div class="col-0 col-lg-1"></div>
-                        <div class="col-12 col-lg-10">
-                            <label for="apellidos" class="form-label">Apellidos:</label>
-                            <input type="text" class="form-control" name="apellidos" placeholder="Ingrese sus Apellidos" required><br>
-                        </div>
-                    </div>
-                </div>
-                <!--Correo de la persona-->
-                <div class="form-group">
-                    <div class="row">
-                        <div class="col-0 col-lg-1"></div>
-                        <div class="col-12 col-lg-10">
-                            <label for="email" class="form-label">Correo electrónico:</label>
-                            <input type="email" class="form-control" name="email" placeholder="Ingrese su correo electrónico" required><br>
-                        </div>
-                    </div>
-                </div>
-                <!--Mensaje-->
-                <div class="form-group">
-                    <div class="row">
-                        <div class="col-0 col-lg-1"></div>
-                        <div class="col-12 col-lg-10">
-                            <label for="comentario" class="form-label">Comentario:</label>
-                            <textarea name="comentario"  class="form-control textarea" cols="30" rows="10" placeholder="Ingrese un comentario" required></textarea><br>
-                        </div>
-                    </div>
-                </div>
-                <!--Botones-->
-                <div class="row">
-                    <div class="col-1 col-lg-3"></div>
-                    <div class="col-5 col-lg-3">
-                        <!-- Boton alerta Mensaje enviado -->
-                        <button type="submit" class="btn enviar" data-bs-toggle="modal" data-bs-target="#alertEnviar">ENVIAR</button> 
-                    </div>
-                    <div class="col-5 col-lg-3">
-                        <!-- Boton alerta Redireccionamiento de vista -->
-                        <button type="button" class="btn cancelar" data-bs-toggle="modal" data-bs-target="#alertCancelar">CANCELAR</button>
-                    </div>
-                </div>
-            </form>
+            <!--Contenedor-->
+            <div class="contenedor">
             
-            <!-- Modal/Alerta ACEPTAR-->
-            <div class="modal fade" id="alertEnviar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">MENSAJE</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            ¿Desea enviar mensaje a <b> ADOPTA UN PELUDO </b> ? <br> <hr> <br>
-                            Presione <b>ACEPTAR</b> para confirmar e ir al inicio. <br>
-                            Presione <b>CANCELAR</b> para volver al formulario.
-                        </div>
-                        <div class="modal-footer">
-                            <a href="index.html" class="btn btn-danger enviar2" >Aceptar</a>
-                            <button type="button" class="btn btn-secondary cancelar2" data-bs-dismiss="modal">Cancelar</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+              <div class="row">
+                  <div class="col-1 col-md-1"></div>
+                  <div class="col-10 col-md-10">
+                      <form class="needs-validation">
+                          <!--Nombre -->
+                          <div class="form-group">
+                                  <label for="nombre" class="form-label"> Nombre Completo </label>
+                                  <input type="text" class="form-control" id="nombre" placeholder="Ingrese su nombre completo">
+                                  <div class="valid-feedback">
+                                      correct!
+                                    </div>
+                          </div>
+                          <br>
+                          <!--Email -->
+                          <div class="form-group">
+                                  <label for="correo" class="form-label"> Correo Electrónico </label>
+                                  <input type="email" class="form-control" id="correo" placeholder="Ingrese su correo electrónico">
+                                  <span class="error" id="errorEmail"></span><br><br>
+                                  <div class="valid-feedback">
+                                      correct!
+                                    </div>
+                          </div>
+                          <br>
+                          <!--TELEFONO-->
+                          <div class="form-group">
+                                  <label for="telefono" class="form-label">Telefono</label>
+                                  <input type="text" class="form-control" id="asunto" placeholder="Ingrese el asunto del mensaje">
+                                  <div class="invalid-feedback">
+                                      ingrese numero!.
+                                    </div>
+                          </div>
+                          <br>
+                          <!--Ciudad-->
+                          <div class="col-md-5">
+                              <label for="validationCustom04" class="form-label">Ciudad</label>
+                              <select class="form-select" id="validationCustom04" required>
+                              <option selected disabled value="">ciudad</option>
+                              <option value="1">santiago</option>
+                              <option value="2">melipilla</option>
+                              <option value="3">concepcion</option>
+                              <option value="4">viña del mar</option>
+                              <option value="5">la serena</option>
+                              <option value="6">talca</option>
+                              <option>...</option>
+                              </select>
+                              <div class="invalid-feedback">
+                              Please select a valid state.
+                              </div>
+                          </div>
+                           <!--rut o pasaporte-->
+                          <div class="form-check">
+                              <input type="radio" class="form-check-input" id="validationFormCheck2" name="rut" required>
+                              <label class="form-check-label" for="validationFormCheck2">Rut</label>
+                          </div>
+                          <div class="form-check mb-3">
+                              <input type="radio" class="form-check-input" id="validationFormCheck3" name="radio-stacked" required>
+                              <label class="form-check-label" for="validationFormCheck3">pasaporte</label>
+                              <div class="invalid-feedback">More example invalid feedback text</div>
+                          </div>
+                          <div>
+                              <input type="text" class="form-control" id="rut o pasaporte" placeholder="Ingrese N°de rut o pasaporte">
+                                  
+                          </div>
 
-            <!-- Modal/Alerta CANCELAR-->
-            <div class="modal fade" id="alertCancelar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">MENSAJE</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            ¿Desea volver a la página de <b>INICIO</b> de <b> ADOPTA UN PELUDO </b> ? <br> <hr> <br>
-                            Presione <b>ACEPTAR</b> para confirmar. <br>
-                            Presione <b>CANCELAR</b> para volver al formulario.
-                        </div>
-                        <div class="modal-footer">
-                            <a href="index.html" class="btn btn-danger enviar2" >Aceptar</a>
-                            <button type="button" class="btn btn-secondary cancelar2" data-bs-dismiss="modal">Cancelar</button>
-                        </div>
+                          <!--Comentario-->
+                          <div class="mb-3">
+                            <label for="exampleFormControlTextarea1" class="form-label">Comentario</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                          </div>
+                          <span class="error" id="errorcomentario"></span><br><br>
+                          <div class="valid-feedback"></div>
+                          
+                    
+                          <!--Botones-->
+                          <div class="row">
+                            <div class="col-1 col-lg-3"></div>
+                            <div class="col-5 col-lg-3">
+                                <button type="submit" class="btn enviar">ENVIAR</button> 
+                            </div>
+                            <div class="col-5 col-lg-3">
+                                <button type="reset" class="btn limpiar">LIMPIAR</button>
+                            </div>
+                            <div class="col-5 col-lg-3">
+                              <button type="button" class="btn cancelar">CANCELAR</button>
+                          </div>
+                  
                     </div>
-                </div>
-            </div>
-        </section>
+                  
+                  </form>
         <!--Pie de página con los integrantes del equipo-->
         <footer>
             <p> 
