@@ -54,12 +54,11 @@
             <h1 class="h1"> CONTÁCTANOS </h1>
             <!--Contenedor-->
             <div class="contenedor">
-            
                 <div class="row">
                     <div class="col-1 col-md-1"></div>
                     <div class="col-10 col-md-10">
-                        <form id="formulario" name="formulario" action="" method="">
-                            <!--Explicación de campos obligatorios-->
+                        <form id="formulario" name="formulario" action="http://www.colex.cl/duoc/cargaData.php" method="POST">
+                            <input type="hidden" id="url" name="url"value="http://www.google.cl">
                             <!--Nombre -->
                             <div class="form-group">
                                 <label for="nombre" class="form-label"> Nombre Completo: </label>
@@ -106,7 +105,7 @@
                             <!--Teléfono-->
                             <div class="form-group">
                                 <label for="telefono" class="form-label">Teléfono:</label>
-                                <input type="number" class="form-control" id="telefono" placeholder="Ingrese su número telefónico">
+                                <input type="number" class="form-control" id="telefono" name="telefono" placeholder="Ingrese su número telefónico">
                                 <span class="error" id="error_telefono"></span>
                             </div>
                             <br>
@@ -114,15 +113,15 @@
                             <div class="col-md-5">
                                 <label for="ciudad" class="form-label">Ciudad:</label>
                                 <label class="obligatorio">*</label> <br>
-                                <select class="form-select select" id="ciudad" onblur="validaCampo('ciudad')">
+                                <select class="form-select select" id="ciudad" name="ciudad" onblur="validaCampo('ciudad')">
                                     <option selected value="">--Seleccione una ciudad--</option>
-                                    <option value="1">Santiago</option>
-                                    <option value="2">Melipilla</option>
-                                    <option value="3">Concepcion</option>
-                                    <option value="4">Viña del mar</option>
-                                    <option value="5">La serena</option>
-                                    <option value="6">Talca</option>
-                                    <option value="7">Otra ciudad</option>
+                                    <option value="Santiago">Santiago</option>
+                                    <option value="Melipilla">Melipilla</option>
+                                    <option value="Concepcion">Concepcion</option>
+                                    <option value="Viña del mar">Viña del mar</option>
+                                    <option value="La serena">La serena</option>
+                                    <option value="Talca">Talca</option>
+                                    <option value="Otra ciudad">Otra ciudad</option>
                                 </select>
                                 <span class="error" id="error_ciudad"></span>
                             </div>
@@ -132,7 +131,7 @@
                             <div class="form-group">
                                 <label for="comentario" class="form-label">Comentario:</label> 
                                 <label class="obligatorio">*</label>
-                                <textarea class="form-control textarea" id="comentario" rows="3" placeholder="Escriba aquí el mensaje" onblur="validaCampo('comentario')"></textarea>
+                                <textarea class="form-control textarea" id="comentario" name="comentario" rows="3" placeholder="Escriba aquí el mensaje" onblur="validaCampo('comentario')"></textarea>
                                 <span class="error" id="error_comentario"></span><br>
                             </div>
                             
@@ -148,32 +147,11 @@
                                     <button type="submit" class="btn enviar" onclick="enviarDatos(event)" data-bs-toggle="modal" data-bs-target="#mensaje_errores">ENVIAR</button> 
                                 </div>
                             </div>
-                            <!--Formulario enviado-->
-                            <span id="message_enviado" class="d-none">Enviado</span>
                         </form>
                     </div>
                 </div>
             </div>
         </section>
-        <!--Creación de modal-->
-        
-        <!-- Modal -->
-        <div class="modal fade" id="mensaje_errores" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="title">MENSAJE</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <ul id="message"></ul>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn enviar2"data-bs-dismiss="modal" id="enviar_form" >Aceptar</button>
-                    </div>
-                </div>
-            </div>
-        </div>
         <!--Pie de página con los integrantes del equipo-->
         <footer>
             <p> 
