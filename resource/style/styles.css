@@ -124,8 +124,9 @@ a:link, a:visited, a:active{
     background-color: rgb(156, 81, 158);
     color: aliceblue;
     font-family: sans-serif;
-    font-size: 18px;
-    width: 70%;
+    font-size: 20px;
+    width: 80%;
+    height: 40px;
     padding: 2%;
     border-radius: 20px;
     border-style: none;
@@ -146,8 +147,9 @@ a:link, a:visited, a:active{
     background-color: rgb(110, 108, 108);
     color: aliceblue;
     font-family: sans-serif;
-    font-size: 18px;
-    width: 70%;
+    font-size: 20px;
+    width: 80%;
+    height: 40px;
     padding: 2%;
     border-radius: 20px;
     border-style: none;
@@ -178,8 +180,10 @@ a:link, a:visited, a:active{
     color: white;
 }
 
+
 input[type="text"]:focus,
 input[type="email"]:focus,
+.select:focus,
 .textarea:focus{   
     border: 3px;
     border-color: rgb(156, 81, 158);
@@ -240,3 +244,16 @@ hr{
     font-size: xx-large;
 }
 
+.obligatorio{
+    color: red;
+    font-size: 20px;
+}
+
+.error{
+    color: red;
+    font-size: 15px;
+}
+
+label{
+    font-size: 18px;
+}
