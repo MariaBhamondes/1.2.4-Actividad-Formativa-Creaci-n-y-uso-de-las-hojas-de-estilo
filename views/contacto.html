@@ -7,7 +7,7 @@
         <!--Importar bootstrap-->
         <link rel="stylesheet" href="../resource/bootstrap-5.0.0/css/bootstrap.min.css">
         <script src="../resource/bootstrap-5.0.0/js/bootstrap.min.js"></script>
-        <script src="js/validacionCampos.js"></script>
+        
         <!--Hoja de estilos propia-->
         <link rel="stylesheet" href="../resource/style/styles.css">
 
@@ -54,93 +54,102 @@
             <h1 class="h1"> CONTÁCTANOS </h1>
             <!--Contenedor-->
             <div class="contenedor">
-            
-              <div class="row">
-                  <div class="col-1 col-md-1"></div>
-                  <div class="col-10 col-md-10">
-                      <form class="needs-validation">
-                          <!--Nombre -->
-                          <div class="form-group">
-                                  <label for="nombre" class="form-label"> Nombre Completo </label>
-                                  <input type="text" class="form-control" id="nombre" placeholder="Ingrese su nombre completo">
-                                  <div class="valid-feedback">
-                                      correct!
+                <div class="row">
+                    <div class="col-1 col-md-1"></div>
+                    <div class="col-10 col-md-10">
+                        <form id="formulario" name="formulario" action="http://www.colex.cl/duoc/cargaData.php" method="POST">
+                            <input type="hidden" id="url" name="url"value="http://www.google.cl">
+                            <!--Nombre -->
+                            <div class="form-group">
+                                <label for="nombre" class="form-label"> Nombre Completo: </label>
+                                <label class="obligatorio">*</label> <br>
+                                <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ingrese su nombre completo" onblur="validaCampo('nombre')">
+                                <span class="error" id="error_nombre"></span>
+                            </div>
+                            <br>
+                            <!--Email -->
+                            <div class="form-group">
+                                <label for="correo" class="form-label"> Correo Electrónico: </label>
+                                <label class="obligatorio">*</label> <br>
+                                <input type="email" class="form-control" id="email" name="correo" placeholder="Ingrese su correo electrónico" onblur="validaCampo('email')">
+                                <span class="error" id="error_email"></span>
+                            </div>
+                            <br>
+                            
+                            <!--rut o pasaporte-->
+                            <div>
+                                <label for="documento">Seleccione tipo de documento:</label>
+                                <label class="obligatorio">*</label> <br>
+                                <div class="row">
+                                    <div class="col-12 col-lg-3">
+                                        <div class="form-check form-check-inline mt-2">
+                                            <input class="form-check-input" type="radio" name="tipo_documento" id="rut" checked onchange="conocerCheckeado('rut')" value="rut">
+                                            <label class="form-check-label" for="rut">
+                                                Rut
+                                            </label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="tipo_documento" id="pasaporte" onchange="conocerCheckeado('pasaporte')" value="pasaporte">
+                                            <label class="form-check-label" for="pasaporte">
+                                                Pasaporte
+                                            </label>
+                                        </div>
                                     </div>
-                          </div>
-                          <br>
-                          <!--Email -->
-                          <div class="form-group">
-                                  <label for="correo" class="form-label"> Correo Electrónico </label>
-                                  <input type="email" class="form-control" id="correo" placeholder="Ingrese su correo electrónico">
-                                  <span class="error" id="errorEmail"></span><br><br>
-                                  <div class="valid-feedback">
-                                      correct!
+                                    <div class="col-12 col-lg-9 mt-1">
+                                        <input type="text" class="form-control" id="documento" name="documento" placeholder="Ingrese el número de documento seleccionado" onblur="validaCampo('documento');">
+                                        <span class="error" id="error_documento"></span>
+                                        <span class="error" id="error_rut"></span>
                                     </div>
-                          </div>
-                          <br>
-                          <!--TELEFONO-->
-                          <div class="form-group">
-                                  <label for="telefono" class="form-label">Telefono</label>
-                                  <input type="text" class="form-control" id="asunto" placeholder="Ingrese el asunto del mensaje">
-                                  <div class="invalid-feedback">
-                                      ingrese numero!.
-                                    </div>
-                          </div>
-                          <br>
-                          <!--Ciudad-->
-                          <div class="col-md-5">
-                              <label for="validationCustom04" class="form-label">Ciudad</label>
-                              <select class="form-select" id="validationCustom04" required>
-                              <option selected disabled value="">ciudad</option>
-                              <option value="1">santiago</option>
-                              <option value="2">melipilla</option>
-                              <option value="3">concepcion</option>
-                              <option value="4">viña del mar</option>
-                              <option value="5">la serena</option>
-                              <option value="6">talca</option>
-                              <option>...</option>
-                              </select>
-                              <div class="invalid-feedback">
-                              Please select a valid state.
-                              </div>
-                          </div>
-                           <!--rut o pasaporte-->
-                          <div class="form-check">
-                              <input type="radio" class="form-check-input" id="validationFormCheck2" name="rut" required>
-                              <label class="form-check-label" for="validationFormCheck2">Rut</label>
-                          </div>
-                          <div class="form-check mb-3">
-                              <input type="radio" class="form-check-input" id="validationFormCheck3" name="radio-stacked" required>
-                              <label class="form-check-label" for="validationFormCheck3">pasaporte</label>
-                              <div class="invalid-feedback">More example invalid feedback text</div>
-                          </div>
-                          <div>
-                              <input type="text" class="form-control" id="rut o pasaporte" placeholder="Ingrese N°de rut o pasaporte">
-                                  
-                          </div>
+                                </div> 
+                            </div>
+                            <br>
+                            <!--Teléfono-->
+                            <div class="form-group">
+                                <label for="telefono" class="form-label">Teléfono:</label>
+                                <input type="number" class="form-control" id="telefono" name="telefono" placeholder="Ingrese su número telefónico">
+                                <span class="error" id="error_telefono"></span>
+                            </div>
+                            <br>
+                            <!--Ciudad-->
+                            <div class="col-md-5">
+                                <label for="ciudad" class="form-label">Ciudad:</label>
+                                <label class="obligatorio">*</label> <br>
+                                <select class="form-select select" id="ciudad" name="ciudad" onblur="validaCampo('ciudad')">
+                                    <option selected value="">--Seleccione una ciudad--</option>
+                                    <option value="Santiago">Santiago</option>
+                                    <option value="Melipilla">Melipilla</option>
+                                    <option value="Concepcion">Concepcion</option>
+                                    <option value="Viña del mar">Viña del mar</option>
+                                    <option value="La serena">La serena</option>
+                                    <option value="Talca">Talca</option>
+                                    <option value="Otra ciudad">Otra ciudad</option>
+                                </select>
+                                <span class="error" id="error_ciudad"></span>
+                            </div>
+                            <br>
 
-                          <!--Comentario-->
-                          <div class="mb-3">
-                            <label for="exampleFormControlTextarea1" class="form-label">Comentario</label>
-                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                          </div>
-                          <span class="error" id="errorcomentario"></span><br><br>
-                          <div class="valid-feedback"></div>
-                          
-                    
-                          <!--Botones-->
-                          <div class="row">
-                            <div class="col-1 col-lg-3"></div>
-                            <div class="col-5 col-lg-3">
-                                <button type="submit" class="btn enviar">ENVIAR</button> 
+                            <!--Comentario-->
+                            <div class="form-group">
+                                <label for="comentario" class="form-label">Comentario:</label> 
+                                <label class="obligatorio">*</label>
+                                <textarea class="form-control textarea" id="comentario" name="comentario" rows="3" placeholder="Escriba aquí el mensaje" onblur="validaCampo('comentario'); validarLargo('comentario');"></textarea>
+                                <span class="error" id="error_comentario"></span>
+                                <span class="error" id="error_largo_comentario"></span>
                             </div>
-                            <div class="col-5 col-lg-3">
-                                <button type="reset" class="btn limpiar">LIMPIAR</button>
+                            
+                            <!--Botones-->
+                            <div class="row mt-4">
+                                <div class="col-1 col-lg-2"></div>
+                                <div class="col-5 col-lg-4">
+                                    <button type="reset" class="btn cancelar">
+                                        LIMPIAR
+                                    </button>
+                                </div>
+                                <div class="col-5 col-lg-4">
+                                    <button type="submit" class="btn enviar" onclick="enviarDatos(event)">ENVIAR</button> 
+                                </div>
                             </div>
-                            <div class="col-5 col-lg-3">
-                              <button type="button" class="btn cancelar">CANCELAR</button>
-                          </div>
-                  
+                        </form>
                     </div>
                   
                   </form>
@@ -152,6 +161,10 @@
                     <li> <i>  María Fernanda &COPY; </i> </li>
                 </ul>
             </p>
+
+
+            <!--Importar validaciones js-->
+        <script src="../resource/js/validacionCampos.js"></script>
         </footer>
     </body>
 </html>
