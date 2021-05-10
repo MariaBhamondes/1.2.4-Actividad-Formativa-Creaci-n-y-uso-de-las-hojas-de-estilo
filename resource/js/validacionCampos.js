@@ -41,5 +41,87 @@ function enviarDatos(e){
     } 
 }
 
+$(document).ready(function(){
+
+    var form=$
+("#formulario").validate({
+    rules:{
+        nombre:{
+            requered:true,
+            minlength:5,
+        }
+    },
+    messages:{
+        nombre:{
+            required:"Error"
+        }
+    }
+});
 
 
+});
+//mail
+
+$(document).ready(function() {
+    $('#Formulario').click(function(){
+        if($("#email").val().indexOf('@', 0) == -1 || $("#email").val().indexOf('.', 0) == -1) {
+            alert('error.');
+            return false;
+        }
+
+        alert('El email introducido es correcto.');
+    });
+});
+
+//telefono vi que el plugin lo traia por defecto 
+
+$.validator.setDefaults({
+    debug: true,
+    success: "valid"
+  });
+  $( "#formulario" ).validate({
+    rules: {
+      telefono: {
+        required: true,
+        phoneUS: true
+      }
+    }
+  });
+
+//ciudad
+$(document).ready(function(){
+
+    var form=$
+("#formulario").validate({
+    rules:{
+        ciudad:{
+            requered:true,
+            minlength:5,
+        }
+    },
+    ciudad:{
+        comentario:{
+            required:"Error"
+        }
+    }
+});
+});
+
+//comentarios
+  $(document).ready(function(){
+
+    var form=$
+("#formulario").validate({
+    rules:{
+        comentario:{
+            requered:true,
+            minlength:5,
+        }
+    },
+    messages:{
+        comentario:{
+            required:"Error"
+        }
+    }
+});
+});
