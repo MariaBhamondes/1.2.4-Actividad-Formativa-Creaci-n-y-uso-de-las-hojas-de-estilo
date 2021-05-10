@@ -127,9 +127,7 @@ function enviarDatos(e){
     }
 
 
-    var validarLargoComentario = validarLargo('comentario');
-    alert(validarLargoComentario);
-    
+    var validarLargoComentario = validarLargo('comentario');    
     //agregar a la lista campo_no_valido los input que no tienen datos
     for (let i = 0; i < id_campos.length; i++) {
         if(!validaCampo(id_campos[i])){
