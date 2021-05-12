@@ -11,6 +11,15 @@
         <!--Hoja de estilos propia-->
         <link rel="stylesheet" href="../resource/style/styles.css">
 
+        <!--Importar jQuery-->
+        <script src="../resource/jQuery-3.6.0/jQuery-3.6.0.js"></script>
+
+        <!--Importar validaciones js-->
+        <script src="../resource/js/validacionCampos.js"></script>
+
+        <!--Importar hoja de js climatología-geolocalización propia-->
+        <script src="../resource/js/geolocalizacion_clima.js"></script>
+
     </head>
     <body class="bg-fondo">
         <!--Barra navegadora-->
@@ -49,6 +58,18 @@
             </div>
         </nav>
         <!--Cuerpo de la página-->
+        <div class="clima_actual">
+            <div class="row">
+                <div class="col-1 col-md-6"></div>
+                <div class="col-8 col-md-4 mx-0 px-0 parrafos_lineales">
+                    <p id="clima" class="p_clima"></p>
+                </div>
+                <div class="col-3 col-md-1">
+                    <img src="" class="icono_clima" id="icon">
+                </div>
+            </div>
+            
+        </div>
         <section class="container fondo-container">
             <!--Cabecera titulo principal de la vista-->
             <h1 class="h1"> CONTÁCTANOS </h1>
@@ -96,7 +117,7 @@
                                         </div>
                                     </div>
                                     <div class="col-12 col-lg-9 mt-1">
-                                        <input type="text" class="form-control" id="documento" name="documento" placeholder="Ingrese el número de documento seleccionado" onblur="validaCampo('documento');">
+                                        <input type="text" class="form-control" id="documento" name="documento" placeholder="Ingrese el número de documento seleccionado" onblur="validaCampo('documento');" value="">
                                         <span class="error" id="error_documento"></span>
                                         <span class="error" id="error_rut"></span>
                                     </div>
@@ -162,10 +183,6 @@
                     <li> <i>  María Fernanda &COPY; </i> </li>
                 </ul>
             </p>
-
-
-            <!--Importar validaciones js-->
-        <script src="../resource/js/validacionCampos.js"></script>
         </footer>
     </body>
 </html>
