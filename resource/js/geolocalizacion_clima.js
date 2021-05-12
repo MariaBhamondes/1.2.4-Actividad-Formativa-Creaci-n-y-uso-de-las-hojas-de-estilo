@@ -73,10 +73,14 @@ function handle_geolocation_query(position) {
         }
         if (existe == true) {
             $("#icon").attr("src", "../resource/icons/" + imagen + ".png");
+            $("#icon_p").attr("src", "../../resource/icons/" + imagen + ".png");
+            $("#icon_g").attr("src", "../../resource/icons/" + imagen + ".png");
         }
 
         mostrar_clima.append("Bienvenido la temperatura actual en <b>" + ciudad.toUpperCase() + "</b>");
         mostrar_clima.append(" es <b>" + temperatura + "°C </b>");
         mostrar_clima.append("<b>" + descripcion + "</b>");
+
+        $("#clima_div").css("display", "block");
     };
 }
