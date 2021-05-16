@@ -1,52 +1,110 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Lucifer</title>
+        <title>Lucifer - Gatos</title>
 
-        <!--Importar hoja de estilos-->
-        <link rel="stylesheet" href="../../resource/style/estilos.css">
-        <link rel="stylesheet" href="../../resource/style/style.css">
+        <!--Importar bootstrap-->
+        <link rel="stylesheet" href="../../resource/bootstrap-5.0.0/css/bootstrap.min.css">
+        <script src="../../resource/bootstrap-5.0.0/js/bootstrap.min.js"></script>
+
+        <!--Hoja de estilos propia-->
+        <link rel="stylesheet" href="../../resource/style/styles.css">
+
+        <!--Importar jQuery-->
+        <script src="../../resource/jQuery-3.6.0/jQuery-3.6.0.js"></script>
+
+        <!--Importar hoja de js propia-->
+        <script src="../../resource/js/geolocalizacion_clima.js"></script>
 
     </head>
-    <body class="contenedor">
+    <body class="bg-fondo">
         <!--Barra navegadora-->
-        <section>
-            <nav>
-                <ul>
-                    <li><a href="../index.html">Inicio </a></li>
-                    <li><a href="../nosotros.html">Nosotros </a></li>
-                    <li><a href="../dogs/perros.html">Perros</a></li>
-                    <li><a href="gatos.html">Gatos </a></li>
-                    <li><a href="../contacto.html">Contactos</a></li>
-                </ul>
-            </nav>
-        </section>
-
-        <!--Cuerpo página-->
-        <section class="fondo-body">
-            <!--Cabecera titulo principal de la vista-->
-            <div class="header">
-                <h1 class="h1"> LUCIFER </h1>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-nav">
+            <div class="container-fluid">
+                <a class="navbar-brand titulo" href="../index.html">AYUDA A UN PELUDO</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="../index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../nosotros.html">Nosotros</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Mascotas
+                            </a>
+                            <ul class="dropdown-menu navbar-dark bg-nav2" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="gatos.html">Gatos</a></li>
+                                <li><a class="dropdown-item" href="../dogs/perros.html">Perros</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-secondary" type="submit">Buscar</button>
+                    </form>
+                </div>
             </div>
-
+        </nav>    
+        <!--Mostrar detalles del clima-->
+        <div class="clima_actual" id="clima_div">
+        <div class="row">
+            <div class="col-1 col-md-6"></div>
+            <div class="col-8 col-md-4 mx-0 px-0 parrafos_lineales">
+                <p id="clima" class="p_clima"></p>
+            </div>
+            <div class="col-3 col-md-1">
+                <img src="../../resource/icons/default.jpg" class="icono_clima" id="icon_g">
+            </div>
+        </div>
+    </div>
+    <!--Mensaje error en caso de no acceso a geolocalización-->
+    <div class="error_clima" id="error_clima_div">
+        <div class="row">
+            <div class="col-1 col-md-6"></div>
+            <div class="col-8 col-md-4 mx-0 px-0 parrafos_lineales">
+                <p id="mensaje_error_clima" class="p_error_clima"></p>
+            </div>
+            <div class="col-3 col-md-1">
+                <img src="../../resource/icons/gps.png" class="icono_clima">
+            </div>
+        </div>
+    </div>
+    <!--Cuerpo de la página-->
+        <section class="container fondo-container">
+            <!--Cabecera titulo principal de la vista-->
+            <h1 class="h1"> LUCIFER </h1>
             <!--Cuerpo del documento-->
             <section class="fondo-container">
                 <!--Botones para volver a las otras vistas-->
-                <a href="gatos.html" class="enlace">Volver a Gatos</a>
+                <a href="gatos.html" class="enlace">Volver a Gatos /</a>
                 <a href="../nosotros.html" class="enlace">Inicio</a>
             
-                <!--Descripción del gato-->
+                <!--Descripción del perro-->
                 <div class="descripcion">
-                    <img src="../../resource/img/lucifer.jpg" alt="Adopción de gato Lucifer" title="Adopción de Lucifer" class="mascota">
-                    <ul class="font detalles">
-                        <li>Nombre: Lucifer</li>
-                        <li>Edad : 6 meses</li>
-                        <li>Género : Macho</li>
-                        <li>Esterilizado: No</li>
-                        <li>N° chip : 55486534</li>
-                    </ul>
-                </div>  
+                    <div class="row">
+                        <div class="col-12 col-lg-8">
+                            <img src="../../resource/img/lucifer.jpg" alt="Adopción de gato Lucifer" title="Adopción de Lucifer" class="mascota">
+                        </div>
+                        <div class="col-12 col-lg-4">
+                            <ul class="font detalles">
+                                <li>Nombre: Lucifer</li> <hr>
+                                <li>Edad : 6 meses</li> <hr>
+                                <li>Género : Macho</li> <hr>
+                                <li>Esterilizado: No</li> <hr>
+                                <li>N° chip : 55486534</li> <hr>
+                            </ul>
+                        </div>
+                    </div>
+                </div> 
             </section>
         </section>
         <!--Pie de página con los integrantes del equipo-->
@@ -60,3 +118,4 @@
         </footer>
     </body>
 </html>
+
