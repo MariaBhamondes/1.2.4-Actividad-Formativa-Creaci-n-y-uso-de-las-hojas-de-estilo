@@ -228,6 +228,9 @@ button:focus{
     margin-top: 0%;
 }  
 
+.card-separacion{
+    background-color: rgb(194, 151, 196);
+}
 
 .detalles{ 
     margin-left: 1%;
@@ -261,7 +264,8 @@ label{
     font-size: 18px;
 }
 
-.clima_actual{
+.clima_actual,
+.error_clima{
     margin-top: 15px;
     margin-bottom: 15px;
     background-color: rgba(161, 88, 161, 0.7);
@@ -269,7 +273,8 @@ label{
     border-radius: 5px;
 }
 
-.p_clima{
+.p_clima, 
+.p_error_clima{
     font-size: 15px;
     letter-spacing: 0.9px;
     padding-top: 25px;
@@ -277,14 +282,17 @@ label{
 }
 
 .icono_clima{
-    width: 60%;
+    margin-top: 10px;
+    width: 70%;
     height: 80%;
+    border-radius: 15px;
 }
 
 .parrafos_lineales{
     text-align: right;
 }
 
-#clima_div{
+#clima_div,
+#error_clima_div{
     display: none;
 }

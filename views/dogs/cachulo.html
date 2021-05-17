@@ -54,18 +54,31 @@
                 </div>
             </div>
         </nav>
-        <!--Cuerpo de la página-->
-        <div class="clima_actual" id="clima_div">
-            <div class="row">
-                <div class="col-1 col-md-6"></div>
-                <div class="col-8 col-md-4 mx-0 px-0 parrafos_lineales">
-                    <p id="clima" class="p_clima"></p>
-                </div>
-                <div class="col-3 col-md-1">
-                    <img src="" class="icono_clima" id="icon_p">
-                </div>
-            </div>
-        </div>
+        <!--Mostrar detalles del clima-->
+       <div class="clima_actual" id="clima_div">
+           <div class="row">
+               <div class="col-1 col-md-6"></div>
+               <div class="col-8 col-md-4 mx-0 px-0 parrafos_lineales">
+                   <p id="clima" class="p_clima"></p>
+               </div>
+               <div class="col-3 col-md-1">
+                   <img src="../../resource/icons/default.jpg" class="icono_clima" id="icon_p">
+               </div>
+           </div>
+       </div>
+       <!--Mensaje error en caso de no acceso a geolocalización-->
+       <div class="error_clima" id="error_clima_div">
+           <div class="row">
+               <div class="col-1 col-md-6"></div>
+               <div class="col-8 col-md-4 mx-0 px-0 parrafos_lineales">
+                   <p id="mensaje_error_clima" class="p_error_clima"></p>
+               </div>
+               <div class="col-3 col-md-1">
+                   <img src="../../resource/icons/gps.png" class="icono_clima">
+               </div>
+           </div>
+       </div>
+       <!--Cuerpo de la página-->
         <section class="container fondo-container">
             <!--Cabecera titulo principal de la vista-->
             <h1 class="h1"> CACHULO </h1>
