@@ -17,6 +17,12 @@
         <!--Importar validaciones js-->
         <script src="../resource/js/validacionCampos.js"></script>
 
+        <!--Importar pluguin validación-->
+        <script src="../resource/jQuery-3.6.0/jQuery-validation.js"></script>
+
+        <!--Importar validaciones con pluguin Validate de jQuery-->
+        <script src="../resource/js/validacion_jQuery_Validate.js"></script>
+
         <!--Importar hoja de js climatología-geolocalización propia-->
         <script src="../resource/js/geolocalizacion_clima.js"></script>
 
@@ -85,6 +91,14 @@
         <section class="container fondo-container">
             <!--Cabecera titulo principal de la vista-->
             <h1 class="h1"> CONTÁCTANOS </h1>
+            <div class="row">
+                <div class="col-9"></div>
+                <div class="col-3">
+                    <div class="d-inline-flex">
+                        <p class="obligatorio-indicaciones text-end"> <b>*</b> Campos requeridos.</p>
+                    </div>
+                </div>
+            </div>
             <!--Contenedor-->
             <div class="contenedor">
                 <div class="row">
@@ -96,16 +110,14 @@
                             <div class="form-group">
                                 <label for="nombre" class="form-label"> Nombre Completo: </label>
                                 <label class="obligatorio">*</label> <br>
-                                <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ingrese su nombre completo" onblur="validaCampo('nombre')">
-                                <span class="error" id="error_nombre"></span>
+                                <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ingrese su nombre completo" >
                             </div>
                             <br>
                             <!--Email -->
                             <div class="form-group">
                                 <label for="correo" class="form-label"> Correo Electrónico: </label>
                                 <label class="obligatorio">*</label> <br>
-                                <input type="email" class="form-control" id="email" name="correo" placeholder="Ingrese su correo electrónico" onblur="validaCampo('email')">
-                                <span class="error" id="error_email"></span>
+                                <input type="email" class="form-control" id="email" name="correo" placeholder="Ingrese su correo electrónico" >
                             </div>
                             <br>
                             
@@ -116,22 +128,20 @@
                                 <div class="row">
                                     <div class="col-12 col-lg-3">
                                         <div class="form-check form-check-inline mt-2">
-                                            <input class="form-check-input" type="radio" name="tipo_documento" id="rut" checked onchange="conocerCheckeado('rut')" value="rut">
+                                            <input class="form-check-input" type="radio" name="tipo_documento" id="rut" checked value="rut">
                                             <label class="form-check-label" for="rut">
                                                 Rut
                                             </label>
                                         </div>
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="tipo_documento" id="pasaporte" onchange="conocerCheckeado('pasaporte')" value="pasaporte">
+                                            <input class="form-check-input" type="radio" name="tipo_documento" id="pasaporte" value="pasaporte">
                                             <label class="form-check-label" for="pasaporte">
                                                 Pasaporte
                                             </label>
                                         </div>
                                     </div>
                                     <div class="col-12 col-lg-9 mt-1">
-                                        <input type="text" class="form-control" id="documento" name="documento" placeholder="Ingrese el número de documento seleccionado" onblur="validaCampo('documento');" value="">
-                                        <span class="error" id="error_documento"></span>
-                                        <span class="error" id="error_rut"></span>
+                                        <input type="text" class="form-control" id="documento" name="documento" placeholder="Ingrese el número de documento seleccionado" value="">
                                     </div>
                                 </div> 
                             </div>
@@ -139,8 +149,7 @@
                             <!--Teléfono-->
                             <div class="form-group">
                                 <label for="telefono" class="form-label">Teléfono:</label>
-                                <input type="number" class="form-control" id="telefono" name="telefono" placeholder="Ingrese su número telefónico">
-                                <span class="error" id="error_telefono"></span>
+                                <input type="tel" class="form-control" id="telefono" name="telefono" placeholder="Ingrese su número telefónico">
                             </div>
                             <br>
                             <!--Ciudad-->
@@ -157,7 +166,6 @@
                                     <option value="Talca">Talca</option>
                                     <option value="Otra ciudad">Otra ciudad</option>
                                 </select>
-                                <span class="error" id="error_ciudad"></span>
                             </div>
                             <br>
 
@@ -165,9 +173,7 @@
                             <div class="form-group">
                                 <label for="comentario" class="form-label">Comentario:</label> 
                                 <label class="obligatorio">*</label>
-                                <textarea class="form-control textarea" id="comentario" name="comentario" rows="3" placeholder="Escriba aquí el mensaje" onblur="validaCampo('comentario'); validarLargo('comentario');"></textarea>
-                                <span class="error" id="error_comentario"></span>
-                                <span class="error" id="error_largo_comentario"></span>
+                                <textarea class="form-control textarea" id="comentario" name="comentario" rows="3" placeholder="Escriba aquí el mensaje"></textarea>
                             </div>
                             
                             <!--Botones-->
@@ -179,7 +185,7 @@
                                     </button>
                                 </div>
                                 <div class="col-5 col-lg-4">
-                                    <button type="submit" class="btn enviar" onclick="enviarDatos(event)">ENVIAR</button> 
+                                    <button type="submit" class="btn enviar">ENVIAR</button> 
                                 </div>
                             </div>
                         </form>

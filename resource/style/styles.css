@@ -80,6 +80,28 @@ ul{
     margin-top: 5%;
 }
 
+.card-text{
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 18px;
+}
+
+.card-title{
+    text-align: center;
+    font-family: sans-serif;
+    font-style: italic;
+    font-size: 18px;
+}
+
+.card-separacion{
+    background-color: rgb(194, 151, 196);
+    height: 3px !important;
+}
+
+.card-img-top{
+    width: 100%;
+}
+
 .h1{
     letter-spacing: 1px;
     color: black;
@@ -228,9 +250,7 @@ button:focus{
     margin-top: 0%;
 }  
 
-.card-separacion{
-    background-color: rgb(194, 151, 196);
-}
+
 
 .detalles{ 
     margin-left: 1%;
@@ -253,6 +273,12 @@ hr{
 .obligatorio{
     color: red;
     font-size: 20px;
+}
+
+.obligatorio-indicaciones{
+    font-size: 15px;
+    color: red;
+    text-align: center;
 }
 
 .error{
