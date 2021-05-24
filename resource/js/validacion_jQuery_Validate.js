@@ -115,6 +115,8 @@ $(document).ready(function(){
         }
     });
 
+    //Crear método para mostrar largo
+
     $("#limpiar").click(function() {
         $("#formulario").validate().resetForm();
     });

@@ -67,9 +67,12 @@ footer{
 }
 
 .integrantes{
+    padding-top: 20px;
+    margin-left: 110px;
     color: white;
     font-family: sans-serif;
     font-size: 14px;
+    letter-spacing: 1px;
 }
 
 ul{
@@ -84,6 +87,12 @@ ul{
     text-align: center;
     font-family: sans-serif;
     font-size: 18px;
+}
+
+.card-text-contacto{
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 16px;
 }
 
 .card-title{
@@ -296,7 +305,6 @@ label{
     margin-bottom: 15px;
     background-color: rgba(161, 88, 161, 0.7);
     color: white;
-    border-radius: 5px;
 }
 
 .p_clima, 
@@ -321,4 +329,9 @@ label{
 #clima_div,
 #error_clima_div{
     display: none;
+}
+
+.largo-comentario{
+    font-size: 15px;
+    color: red;
 }
