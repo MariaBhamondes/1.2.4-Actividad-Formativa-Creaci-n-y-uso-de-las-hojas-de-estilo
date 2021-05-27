@@ -260,7 +260,6 @@ button:focus{
 }  
 
 
-
 .detalles{ 
     margin-left: 1%;
     margin-right: 1%;
@@ -291,6 +290,7 @@ hr{
 }
 
 .error{
+    border-color: red;
     color: red;
     font-size: 15px;
 }
@@ -334,4 +334,10 @@ label{
 .largo-comentario{
     font-size: 15px;
     color: red;
+}
+
+.contador {
+    float: right;
+    color: #757373;
+    font-style: italic;
 }

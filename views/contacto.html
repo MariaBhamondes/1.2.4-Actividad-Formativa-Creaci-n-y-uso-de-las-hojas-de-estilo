@@ -152,7 +152,7 @@
                             <div class="col-md-5">
                                 <label for="ciudad" class="form-label">Ciudad:</label>
                                 <label class="obligatorio">*</label> <br>
-                                <select class="form-select select" id="ciudad" name="ciudad" onblur="validaCampo('ciudad')">
+                                <select class="form-select select" id="ciudad" name="ciudad">
                                     <option selected value="">--Seleccione una ciudad--</option>
                                     <option value="Santiago">Santiago</option>
                                     <option value="Melipilla">Melipilla</option>
@@ -169,15 +169,15 @@
                             <div class="form-group">
                                 <label for="comentario" class="form-label">Comentario:</label> 
                                 <label class="obligatorio">*</label>
-                                <textarea class="form-control textarea" id="comentario" name="comentario" rows="3" placeholder="Escriba aquí el mensaje"></textarea>
-                                <span class="largo-comentario"></span>
+                                <textarea class="form-control textarea" id="comentario" name="comentario" rows="3" placeholder="Escriba aquí el mensaje de 50 caracteres mínimo" minlength="50"></textarea>
+                                <p class="contador" id="contador">Total caracteres: 0</p>
                             </div>
                             
                             <!--Botones-->
                             <div class="row mt-4">
-                                <div class="col-1 col-lg-2"></div>
+                                <div class="col-1 col-lg-3"></div>
                                 <div class="col-5 col-lg-4">
-                                    <button type="reset" class="btn cancelar">
+                                    <button type="reset" class="btn cancelar" id="limpiar">
                                         LIMPIAR
                                     </button>
                                 </div>
